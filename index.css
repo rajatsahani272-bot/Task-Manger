@@ -1,0 +1,123 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body{
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    background-color: whitesmoke;
+}
+header{
+    background-color: #000;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    line-height: 3rem;
+}
+.main-content{
+    display: grid;
+    grid-template-columns:35vw 65vw;
+    padding-top: 2rem;
+    
+}
+/* Input Section */
+.input-group{
+    display: flex;
+    flex-direction: column;
+    padding: 2rem 2rem;
+    gap: 2rem;
+}
+input{
+     padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+button {
+    padding: 12px;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+#add-btn, #update-btn {
+    background-color: #28a745;
+    color: white;
+}
+
+#add-btn:hover { background-color: #218838; }
+
+/* Filters */
+.filters {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    padding: 0 2rem;
+}
+
+.filter-btn {
+    flex: 1;
+    background: #e2e6ea;
+    color: #333;
+    margin: 0 5px;
+}
+
+.filter-btn.active {
+    background-color: #007bff;
+    color: white;
+}
+
+.rightside-main-content{
+    padding: 0 3rem;
+}
+ul { list-style: none; }
+
+li {
+    background: #fff;
+    border-left: 5px solid #007bff;
+    padding: 15px;
+    margin-bottom: 10px;
+    margin-top: 1.5rem;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    border-radius: 4px;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    position: relative;
+}
+
+li.completed {
+    border-left-color: #28a745;
+    opacity: 0.7;
+    text-decoration: line-through;
+}
+/* Reminder styling for overdue tasks */
+li.urgent {
+    border-left-color: #dc3545; /* Red for urgent */
+    background-color: #fff5f5;
+}
+
+.task-title { font-weight: bold; font-size: 1.1rem; }
+.task-desc { font-size: 0.9rem; color: #555; }
+.task-date { font-size: 0.8rem; color: #888; margin-top: 5px;}
+
+.actions {
+    margin-top: 10px;
+    display: flex;
+    gap: 10px;
+    justify-content: flex-end;
+}
+
+.btn-sm {
+    padding: 5px 10px;
+    font-size: 0.8rem;
+}
+
+.delete-btn { background-color: #dc3545; color: white; }
+.edit-btn { background-color: #ffc107; color: black; }
+.check-btn { background-color: #17a2b8; color: white; }
